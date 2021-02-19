@@ -1,0 +1,253 @@
+import java.util.Random;
+import java.util.RandomAccess;
+import java.util.Scanner;
+public class Laba {
+    public static class Mar {
+        String poch_mar, kin_mar;
+        int number;
+
+        public Mar(String po, String ki, int nu) {
+            this.poch_mar = po;
+            this.kin_mar = ki;
+            this.number = nu;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int zavd;
+        do{
+            System.out.print("Input a number: ");
+            zavd = in.nextInt();
+        }while(zavd <  1 || zavd > 4);
+        switch (zavd) {
+            case 1: {
+                Mar[] mas = new Mar[9];
+                int number1;
+                do {
+                    System.out.print("Input a number: ");
+                    number1 = in.nextInt();
+                }while(number1 <= 1 || number1 >= 9);
+                mas[0] = new Mar("Moscow", "Kiev", 1);
+                mas[1] = new Mar("London", "Lviv", 2);
+                mas[2] = new Mar("Moscow", "Amsterdam", 3);
+                mas[3] = new Mar("Lviv", "Chernivtsi", 4);
+                mas[4] = new Mar("Tokyo", "Amsterdam", 5);
+                mas[5] = new Mar("Mehiko", "Keln", 6);
+                mas[6] = new Mar("Brasilia", "Montevideo", 7);
+                mas[5] = new Mar("Madrid", "Paris", 8);
+                mas[5] = new Mar("Paris", "Kiev", 9);
+                switch (number1) {
+                    case 1: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[0].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[0].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[0].number);
+                        break;
+                    }
+                    case 2: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[1].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[1].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[1].number);
+                        break;
+                    }
+                    case 3: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[2].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[2].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[2].number);
+                        break;
+                    }
+                    case 4: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[3].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[3].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[3].number);
+                        break;
+                    }
+                    case 5: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[4].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[4].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[4].number);
+                        break;
+                    }
+                    case 6: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[5].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[5].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[5].number);
+                        break;
+                    }
+                    case 7: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[6].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[6].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[6].number);
+                        break;
+                    }
+                    case 8: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[7].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[7].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[7].number);
+                        break;
+                    }
+                    case 9: {
+                        System.out.print("Початкова точка: ");
+                        System.out.println(mas[8].poch_mar);
+                        System.out.print("Кінцева точка: ");
+                        System.out.println(mas[8].kin_mar);
+                        System.out.print("Номер маршруту: ");
+                        System.out.println(mas[8].number);
+                        break;
+                    }
+
+
+                }
+                in.close();
+            }
+            case 2: {
+                double a = 0.5, b = 4.5, dx = 0.4;
+                double x;
+                for (a = 0.5; a < b; ) {
+                    x = a;
+                    double y = Math.log(x);
+                    System.out.printf("\nx: %.2f",x);
+                    System.out.printf("\ty: %.2f",y);
+                    a = a + dx;
+                }
+            }
+            case 3:{
+                double Suma = 0;
+                double Suma2 = 0;
+            int mas[];
+            int mas2[];
+            System.out.print("Введіть розмірність масиву: ");
+            int roz = in.nextInt();
+            mas = new int[roz];
+            mas2 = new int [roz];
+                Random rand = new Random();
+            for (int i = 0; i < roz; i++){
+                mas[i] = in.nextInt();
+            }
+            for (int i = 0; i < roz; i++){
+                mas2[i] = rand.nextInt(100) + (-100);
+            }
+                int min = mas[0];
+                int min2 = mas2[0];
+            for (int i = 0; i <mas.length; i++){
+                if (min > mas[i]){
+                    min = mas[i];
+                }
+            }
+            for (int i = 0; i <mas2.length; i++){
+                if (min2 > mas2[i]){
+                    min2 = mas2[i];
+                }
+            }
+                System.out.println("Мінімальний елемент масиву: " + min);
+                System.out.println("Мінімальний елемент масиву: " + min2);
+            for (int i =0; i< roz;i++){
+                if(mas[i] == 0){
+                    i++;
+                    while(mas[i] != 0) {
+                        Suma += Math.abs(mas[i]);
+                        i++;
+                    }
+                }
+                else{
+                    System.out.print("Немає нульових елементів");
+                }
+            }
+                System.out.println("Сума елементів: " + Suma);
+                for (int i =0; i< roz;i++){
+                    if(mas2[i] == 0){
+                        i++;
+                        while(mas2[i] != 0) {
+                            Suma2 += Math.abs(mas2[i]);
+                            i++;
+                        }
+                        System.out.println("Сума елементів: " + Suma2);
+                    }
+                }
+                System.out.print("Немає нульових елементів");
+
+            }
+            case 4:{
+                int n;
+                int m;
+                do {
+                    System.out.print("Введіть розмірніть масиву");
+                    n = in.nextInt();
+                    m = in.nextInt();
+                }while (n < 0 || m < 0);
+                int mas[][] = new int [n][m];
+                int mas2[][] = new int [n][m];
+                Random rand = new Random();
+            for (int i = 0; i <n;i++){
+                    for (int j = 0; j< m; j++){
+                        System.out.print("\nВведіть [" + i + "] [" + j + "] елемент масиву: ");
+                        mas[i][j] = in.nextInt();
+                    }
+                }
+                for (int i = 0; i <n;i++){
+                    for (int j = 0; j< m; j++){
+                        mas2[i][j] = rand.nextInt(100) + (-100);
+                    }
+                }
+                int Suma = 0;
+                int Suma2 = 0;
+                int max = mas[0][0];
+                int max2 = mas[1][0];
+                int max3 = mas2[0][0];
+                int max4 = mas2[1][0];
+                for (int i = 0; i<n;i++){
+                    for (int j =0; j<1; j++){
+                        if (max < mas[i][j]){
+                            max = mas[i][j];
+                        }
+                    }
+                    for (int j =1; j<m; j++){
+                        if (max2 < mas[i][j]){
+                            max2 = mas[i][j];
+                        }
+                    }
+                    Suma = max + max2;
+                }
+                for (int i1 = 0; i1<n;i1++){
+                    for (int j =0; j<1; j++){
+                        if (max3 < mas2[i1][j]){
+                            max3 = mas2[i1][j];
+                        }
+                    }
+                    for (int j =1; j<m; j++){
+                        if (max4 < mas2[i1][j]){
+                            max4 = mas2[i1][j];
+                        }
+                    }
+                    Suma2 = max3 + max4;
+                }
+                System.out.print("Сума макс. елем: " + Suma);
+                System.out.print("\nСума макс. елем: " + Suma2);
+            }
+        }
+    }
+}
